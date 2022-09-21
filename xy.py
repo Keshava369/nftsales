@@ -30,11 +30,10 @@ total_sales = int(df_select["Number_of_Sales"].sum())
 sales_usd = int(df_select["Sales_USD"].sum())
 
 
-
-    st.subheader("Total Sales:")
-    st.subheader(f" {total_sales:,}")
-    st.subheader("Sales in USD")
-    st.subheader(f"US $ {sales_usd:,}")
+st.subheader("Total Sales:")
+st.subheader(f" {total_sales:,}")
+st.subheader("Sales in USD")
+st.subheader(f"US $ {sales_usd:,}")
     
 st.markdown("---")
 
