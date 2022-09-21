@@ -4,7 +4,7 @@ import streamlit as st
 
 st.set_page_config(page_title="NFT SALES DASHBOARD",page_icon=":bar_chart:",layout="wide")
 
-df = pd.read_excel("C:/Users/DELL/Desktop/ibm/NFT_Sales 1 (1).xlsx")
+df = pd.read_excel("ibm/NFT_Sales 1 (1).xlsx")
 
 # print(df)
 
