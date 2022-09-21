@@ -29,11 +29,10 @@ st.markdown("##")
 total_sales = int(df_select["Number_of_Sales"].sum())
 sales_usd = int(df_select["Sales_USD"].sum())
 
-left_co, right_co = st.columns(2)
-with left_co:
+
+
     st.subheader("Total Sales:")
     st.subheader(f" {total_sales:,}")
-with right_co:
     st.subheader("Sales in USD")
     st.subheader(f"US $ {sales_usd:,}")
     
