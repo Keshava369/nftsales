@@ -1,6 +1,8 @@
 import pandas as  pd
 import plotly.express as px
 import streamlit as st 
+from st_fn import st_button, load_css
+
 
 st.set_page_config(page_title="NFT SALES DASHBOARD",page_icon=":bar_chart:",layout="wide")
 
@@ -10,14 +12,16 @@ df = pd.read_excel("NFT_Sales 1 (1).xlsx")
 
 # st.dataframe(df)
 
+
 st.sidebar.header("Please Filter Here:")
 
 year = st.sidebar.multiselect(
     "Select the year:",
     options=df["year"].unique(),
-    default=df["year"].unique()
-   
+     default=df["year"].unique()
 )
+
+
 
 
 df_select = df.query(
@@ -31,7 +35,6 @@ st.markdown("##")
 total_sales = int(df_select["Number_of_Sales"].sum())
 sales_usd = int(df_select["Sales_USD"].sum())
 
-
 left_co, right_co = st.columns(2)
 with left_co:
     st.subheader("Total Sales:")
@@ -39,7 +42,6 @@ with left_co:
 with right_co:
     st.subheader("Sales in USD")
     st.subheader(f"US $ {sales_usd:,}")
-    
     
 st.markdown("---")
 
@@ -129,6 +131,17 @@ st.plotly_chart(line_chart)
 st.plotly_chart(primary_sales_chart)
 
 st.plotly_chart(pie_chart)
+
+load_css()
+
+icon_size = 20
+
+st.title(":cyclone: Analyse more on COGNOS")
+
+st_button('IBM', 'https://keshava369.github.io/abcd/', 'COGNOS ANALYTICS', icon_size)
+
+st.info('Login or sign up to explore more on cognos')
+
 
 
 
