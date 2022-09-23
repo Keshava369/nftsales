@@ -17,8 +17,8 @@ st.sidebar.header("Please Filter Here:")
 
 year = st.sidebar.multiselect(
     "Select the year:",
-    options=df["year"].unique(),
-     default=df["year"].unique()
+    options=df["year"].unique() #,
+   #  default=df["year"].unique()
 )
 
 
