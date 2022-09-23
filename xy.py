@@ -126,14 +126,16 @@ hide = """
       """
 st.markdown(hide,unsafe_allow_html=True)
 
-st.plotly_chart(fig_product_sales)
+try:
+    st.plotly_chart(fig_product_sales)
 
-st.plotly_chart(line_chart)
+    st.plotly_chart(line_chart)
 
-st.plotly_chart(primary_sales_chart)
+    st.plotly_chart(primary_sales_chart)
 
-st.plotly_chart(pie_chart)
-
+    st.plotly_chart(pie_chart)
+except:
+    print("")
 load_css()
 
 icon_size = 20
