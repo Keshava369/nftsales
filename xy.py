@@ -58,62 +58,64 @@ sales_in_usd = (
 primary_sales = (
     df_select.groupby(by=["year"]).sum()[["Primary_Sales"]].sort_values(by="Primary_Sales")
 )
+try:
+    fig_product_sales = px.bar(
 
-fig_product_sales = px.bar(
-    
-    sales_by_year,
-    x="Number_of_Sales",
-    y=sales_by_year.index,
-    orientation="h",
-    title="<b>Sales by Year</b>",
-    color_discrete_sequence=["#0083B8"] * len(sales_by_year),
-    template="plotly_white",
-)
-
-fig_product_sales.update_layout(
-    plot_bgcolor = "rgba(0,0,0,0)",
-    xaxis = (dict(showgrid=False))
-)
-
-line_chart = px.line(
-    
-    sales_in_usd,
-    x=sales_in_usd.index,
-    y="Sales_USD",
-    # orientation="h",
-    title="<b>Sales in USD</b>",
-    color_discrete_sequence=["#0083B8"] * len(sales_in_usd),
-    template="plotly_white",
+        sales_by_year,
+        x="Number_of_Sales",
+        y=sales_by_year.index,
+        orientation="h",
+        title="<b>Sales by Year</b>",
+        color_discrete_sequence=["#0083B8"] * len(sales_by_year),
+        template="plotly_white",
     )
 
-line_chart.update_layout(
-    plot_bgcolor = "rgba(0,0,0,0)",
-    xaxis = (dict(showgrid=False)),
-    yaxis = (dict(showgrid=False))
-)
-
-primary_sales_chart = px.line(
-    
-    primary_sales,
-    x=primary_sales.index,
-    y="Primary_Sales",
-    # orientation="h",
-    title="<b>Primary Sales</b>",
-    color_discrete_sequence=["#0083B8"] * len(primary_sales),
-    template="plotly_white",
+    fig_product_sales.update_layout(
+        plot_bgcolor = "rgba(0,0,0,0)",
+        xaxis = (dict(showgrid=False))
     )
 
-primary_sales_chart.update_layout(
-    plot_bgcolor = "rgba(0,0,0,0)",
-    xaxis = (dict(showgrid=False)),
-    yaxis = (dict(showgrid=False))
-)
+    line_chart = px.line(
 
-pie_chart = px.pie(df,
-                   title='Active Market Wallets',
-                   values='Active_Market_Wallets',
-                   names='year'
-                   )
+        sales_in_usd,
+        x=sales_in_usd.index,
+        y="Sales_USD",
+        # orientation="h",
+        title="<b>Sales in USD</b>",
+        color_discrete_sequence=["#0083B8"] * len(sales_in_usd),
+        template="plotly_white",
+        )
+
+    line_chart.update_layout(
+        plot_bgcolor = "rgba(0,0,0,0)",
+        xaxis = (dict(showgrid=False)),
+        yaxis = (dict(showgrid=False))
+    )
+
+    primary_sales_chart = px.line(
+
+        primary_sales,
+        x=primary_sales.index,
+        y="Primary_Sales",
+        # orientation="h",
+        title="<b>Primary Sales</b>",
+        color_discrete_sequence=["#0083B8"] * len(primary_sales),
+        template="plotly_white",
+        )
+
+    primary_sales_chart.update_layout(
+        plot_bgcolor = "rgba(0,0,0,0)",
+        xaxis = (dict(showgrid=False)),
+        yaxis = (dict(showgrid=False))
+    )
+
+    pie_chart = px.pie(df,
+                       title='Active Market Wallets',
+                       values='Active_Market_Wallets',
+                       names='year'
+                       )
+except:
+    print("")
 
 hide = """
       <style>
