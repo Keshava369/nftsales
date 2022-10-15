@@ -142,7 +142,7 @@ icon_size = 20
 
 st.title(":cyclone: Analyse more on COGNOS")
 
-st_button('IBM', 'https://keshava369.github.io/abcd/', icon_size)
+st_button('IBM', 'https://keshava369.github.io/abcd/','cognos analytics', icon_size)
 
 st.info('Login or sign up to explore more on cognos')
 
