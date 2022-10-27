@@ -30,7 +30,7 @@ with st.container():
         st.info("CryptoPunk #3100")
         st.success("$7.57 million")
      with c2:
-        i2 = Image.open("img\download.png")
+        i2 = Image.open("img/download.png")
         st.image(i2)
         st.info("clock")
         st.success("$52.7 million")
