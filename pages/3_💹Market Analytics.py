@@ -6,7 +6,7 @@ from st_fn import st_button, load_css
 
 st.set_page_config(page_title="NFT MARKET SALES",page_icon=":bar_chart:",layout="wide")
 
-df = pd.read_excel("NFT_Sales 1 (2).xlsx")
+df = pd.read_excel("NFT_Sales 1 (1).xlsx")
 
 # print(df)
 
