@@ -9,7 +9,7 @@ st.title(":bar_chart:NFT SALES ANALYTICS")
 st.header("Best tool for NFT analysis")
 st.subheader(":thought_balloon:What you will get in this platform?")
 
-st.info(body="NFT MARKET ANALYTICS",icon="💹")
+st.info(body="NFT MARKET ANALYTICS")
 st.info(body="Top NFTs Analytics",icon="🔝")
 st.info(body="Different types of NFT bands",icon="⭐")
 st.info(body="Dashboards made through Cognos",icon="📉")
