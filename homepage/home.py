@@ -9,10 +9,10 @@ st.title(":bar_chart:NFT SALES ANALYTICS")
 st.header("Best tool for NFT analysis")
 st.subheader(":thought_balloon:What you will get in this platform?")
 
-st.info(body="NFT MARKET ANALYTICS",icon="💹")
-st.info(body="Top NFTs Analytics",icon="🔝")
-st.info(body="Different types of NFT bands",icon="⭐")
-st.info(body="Dashboards made through Cognos",icon="📉")
+st.info(body="💹NFT MARKET ANALYTICS")
+st.info(body="🔝Top NFTs Analytics")
+st.info(body="⭐Different types of NFT bands")
+st.info(body="📉Dashboards made through Cognos")
 
 
 st.header("Want to know about NFT?🤔")
@@ -32,7 +32,7 @@ with st.container():
 
 st.info(body="Go through the FAQs and Dictionary page to understand more about NFT")
         
-st.info(body="exprlore all the content through the side bar",icon="👈")
+st.info(body="👈exprlore all the content through the side bar")
 
 hide = """
       <style>
