@@ -51,3 +51,8 @@ with st.container():
         with st.container():
             st.header("Market Cap")
             st.success("A high estimated market cap means that there are more owners of the tokens and they may be willing to pay a higher price to acquire the NFT collection from one another. This can be calculated by multiplying its 7-day average price by its total supply.")
+    with c2:
+        with st.container():
+            st.header("Royalty")
+            st.info("The way the royalties work in the context of NFTs is that when an artist or a person who's creating the NFT initially sets it up, they could build into the code by way of something called a “smart contract” a method of pushing a portion of the resale proceeds back to the original creator")
+
